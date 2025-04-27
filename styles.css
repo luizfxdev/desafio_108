@@ -1,0 +1,338 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-color: #0FF0FC;
+    --secondary-color: #E7EE4F;
+    --accent-color: #FF0F87;
+    --bg-color: #111;
+    --bg-secondary: #1a1a2e;
+    --text-color: #fff;
+    --border-color: #333;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Background personalizado (adicione sua imagem aqui) */
+.custom-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Remova o comentário abaixo e adicione sua imagem */
+    background-image: url('./images/background2.jpg'); */
+}
+
+/* Star animations */
+.stars, .stars2, .stars3 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.stars {
+    background: transparent url('https://i.imgur.com/YKY28eT.png') repeat top center;
+    animation: move-stars 200s linear infinite;
+}
+
+.stars2 {
+    background: transparent url('https://i.imgur.com/4bKJeev.png') repeat top center;
+    animation: move-stars 150s linear infinite;
+}
+
+.stars3 {
+    background: transparent url('https://i.imgur.com/WeNScWR.png') repeat top center;
+    animation: move-stars 100s linear infinite;
+}
+
+@keyframes move-stars {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 10000px 5000px;
+    }
+}
+
+/* Container Layout */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px rgba(15, 240, 252, 0.5);
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Content Panel */
+.content-panel {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.travel-input {
+    flex: 1;
+    min-width: 300px;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.travel-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+label {
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+input {
+    padding: 0.75rem;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+.result {
+    flex: 1;
+    min-width: 300px;
+}
+
+.result-container {
+    min-height: 200px;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.result-container h3 {
+    color: var(--primary-color);
+}
+
+.path-display {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.path-display span {
+    padding: 0.5rem 1rem;
+    background: rgba(15, 240, 252, 0.1);
+    border-radius: 20px;
+}
+
+.path-display i {
+    color: var(--secondary-color);
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Button styling with animations */
+button {
+    position: relative;
+    background: #444;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    letter-spacing: 0.1rem;
+    font-size: 0.9rem;
+    padding: 0.8rem 1.5rem;
+    transition: 0.2s;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+button:hover {
+    letter-spacing: 0.15rem;
+    padding: 0.85rem 1.55rem;
+    background: var(--clr);
+    color: var(--clr);
+    animation: box 3s infinite;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background: #272822;
+}
+
+button span {
+    position: relative;
+    z-index: 1;
+}
+
+button i {
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
+button i::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    left: 80%;
+    top: -2px;
+    border: 2px solid var(--clr);
+    background: #272822;
+    transition: 0.2s;
+}
+
+button:hover i::before {
+    width: 12px;
+    left: 20%;
+    animation: move 3s infinite;
+}
+
+button i::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    left: 20%;
+    bottom: -2px;
+    border: 2px solid var(--clr);
+    background: #272822;
+    transition: 0.2s;
+}
+
+button:hover i::after {
+    width: 12px;
+    left: 80%;
+    animation: move 3s infinite;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes box {
+    0% {
+        box-shadow: #27272c;
+    }
+    50% {
+        box-shadow: 0 0 25px var(--clr);
+    }
+    100% {
+        box-shadow: #27272c;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-panel {
+        flex-direction: column;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missão Espacial: Rotas Óptimas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="custom-bg"></div>
+    <div class="container">
+        <div class="stars"></div>
+        <div class="stars2"></div>
+        <div class="stars3"></div>
+
+        <header>
+            <h1>Missão Espacial: Rotas Óptimas</h1>
+            <p>Encontre o caminho mais rápido entre os planetas</p>
+        </header>
+
+        <main>
+            <div class="content-panel">
+                <div class="travel-input">
+                    <h2>Calcular Melhor Rota</h2>
+                    <div class="travel-form">
+                        <div class="input-group">
+                            <label for="planetaOrigem">Planeta de Origem</label>
+                            <input type="text" id="planetaOrigem" placeholder="Planeta inicial">
+                        </div>
+                        <div class="input-group">
+                            <label for="planetaDestino">Planeta de Destino</label>
+                            <input type="text" id="planetaDestino" placeholder="Planeta final">
+                        </div>
+                        <div class="button-group">
+                            <button id="calcRoute" style="--clr:#0FF0FC">
+                                <span>Calcular Rota</span><i></i>
+                            </button>
+                            <button id="resetData" style="--clr:#FF0F87">
+                                <span>Limpar Dados</span><i></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="result">
+                    <h2>Resultado</h2>
+                    <div id="resultBox" class="result-container">
+                        <p>Aguardando cálculo da rota...</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Desenvolvido por @luizfx.dev &copy; 2025</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
